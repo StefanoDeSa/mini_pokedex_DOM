@@ -1,0 +1,9 @@
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.card{
+    background-color: aqua;
+    border-color: red;
+    border-width: 8px;
+}
