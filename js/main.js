@@ -75,7 +75,7 @@ function buscarPokemon_lista(url){
 }
 
 function listaPokemon(){
-    const url = "https://pokeapi.co/api/v2/pokemon?limit=10&offset="+Math.floor(Math.random() * 301)
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=10&offset="+Math.floor(Math.random() * 1145)
     let lista_pokemon = document.getElementById('lista_pokemon')
     fetch(url).then(function(response){
         response.json().then(lista => {

@@ -7,3 +7,7 @@
     border-color: red;
     border-width: 8px;
 }
+
+.row{
+    margin-right: 0px !important;
+}
