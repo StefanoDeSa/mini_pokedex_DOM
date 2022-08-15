@@ -11,3 +11,7 @@
 .row{
     margin-right: 0px !important;
 }
+
+ul li{
+    cursor: pointer;
+}
