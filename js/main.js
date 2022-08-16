@@ -120,9 +120,15 @@ let is_shiny = "n"
 function mudarShiny(){
     let card_pokemon = document.getElementsByClassName("card-img-top")
     if(card_pokemon[0].src.includes("other") || is_shiny == "n"){
-        url_slice = card_pokemon[0].src.split("other/official-artwork/")
-        url = url_slice[0]+"shiny/"+url_slice[1]  
-        card_pokemon[0].src = url
+        url_slice = card_pokemon[0].src.split("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/")
+        url_slice = url_slice[1].split(".png")
+        let urlfinal = "https://pokeapi.co/api/v2/pokemon/"+url_slice[0]
+        fetch(urlfinal)
+        .then(function(response){
+            response.json().then(pokemon =>{
+                card_pokemon[0].src = pokemon.sprites.front_shiny
+            })
+        })
         is_shiny = "y"
     }
     else{
